@@ -1,0 +1,42 @@
+<h3 class="text-center mt-2">SignUp-form </h3>
+<div class="container " style="width: 700px; background-color: rgb(130, 211, 109);" >
+    <form action="" [formGroup]="myForm" (ngSubmit)="onsubmit()">
+
+<div class="form-group">
+    <label for="">Name:</label>
+    <input type="text" name="name" class="form-control" formControlName="name" 
+    required [ngClass]="{'is-invalid':isSubmitted && f.name.errors}" >
+    <div *ngIf="isSubmitted && f.name.errors?.required" class="invalid-feedback">  Name is required.</div>
+</div>
+
+<div class="form-group">
+    <label for="">Age:</label>
+    <input type="text" name="age" class="form-control" formControlName="age" 
+    required [ngClass]="{'is-invalid':isSubmitted && f.age.errors}" >
+    <div *ngIf="isSubmitted && f.age.errors?.required" class="invalid-feedback"></div>
+</div>
+
+<div class="form-group">
+    <label for="">EmpId:</label>
+    <input type="text" name="empId" class="form-control" formControlName="empId" 
+    required [ngClass]="{'is-invalid':isSubmitted && f.empId.errors}" >
+    <div *ngIf="isSubmitted && f.empId.errors?.required" class="invalid-feedback">  </div>
+</div>
+<div class="form-group">
+    <label for="">Branch:</label>
+    <input type="text" name="branch" class="form-control" formControlName="branch" 
+    required [ngClass]="{'is-invalid':isSubmitted && f.branch.errors}" >
+    <div *ngIf="isSubmitted && f.branch.errors?.required" class="invalid-feedback">  </div>
+</div>
+
+<div class="form-group">
+    <label for="">Role:</label>
+    <input type="text" name="role" class="form-control" formControlName="role" 
+    required [ngClass]="{'is-invalid':isSubmitted && f.role.errors}" >
+    <div *ngIf="isSubmitted && f.role.errors?.required" class="invalid-feedback"></div>
+</div>
+<button type="submit" class="btn btn-success my-3">Submit</button>
+</form>
+</div>
+
+

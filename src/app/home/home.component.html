@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center mb-4 align-items-center">
+    <h5 class="me-3">WelCome  User</h5> <h3>{{User.name}}</h3>
+   
+</div>
+
+
+<table class="table table-striped">
+    <tr>
+        <th> User Name</th>
+        <th>Age</th>
+        <th>EmployeeId</th>
+        <th>Branch</th>
+        <th>Role</th>
+        <th>Edit</th>
+        
+    </tr>
+    <tr>
+        <td>{{User.name}}</td>
+        <td>{{User.age}}</td>
+        <td>{{User.empId}}</td>
+        <td>{{User.branch}}</td>
+        <td>{{User.role}}</td>
+        <td><button type="button" (click)="onedit(User.id,User)"  class="btn btn-warning">Edit</button></td>
+    </tr>
+    </table>
